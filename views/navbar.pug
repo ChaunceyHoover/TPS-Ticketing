@@ -1,0 +1,12 @@
+nav.navbar.navbar-expand-sm.navbar-dark.bg-dark
+	a.navbar-brand(href="/")
+		img(src="/img/ticket.svg" width="36" height="36" alt="Home" style="margin:0 8px") 
+		| TPS Tickets
+	button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarExtra" aria-controls="navbarExtra" aria-expanded="false" aria-label="Toggle Navigation")
+		span.navbar-toggler-icon
+	.collapse.navbar-collapse#navbarExtra
+		form.form-inline.ml-sm-auto
+			input.form-control.mr-sm-2(type="search" placeholder="Search... (or ticket ID)" aria-label="Search")
+			button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
+		button.btn.btn-dark.ml-0.ml-sm-2.d-none.d-sm-block(type="button" onclick="show_navbar()")
+			span.navbar-toggler-icon

@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').load();
 
 router.get('/', function(req, res, next) {
-    return res.sendFile(path.join(__dirname, '../wwwroot/index.html'));
+    return res.render('index', /*{ key: var }*/);
 });
 
 module.exports = router;
