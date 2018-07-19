@@ -69,17 +69,24 @@ nav {
 .menu-header {
 	font-size: 1em;
 	font-weight: bold;
-	background-color: gray;
+	background-color: lightslategray;
 	color: white;
 	border: 1px solid dimgray;
 	border-radius: 0.5em 0.5em 0 0;
 	padding: 0.5em 1em;
 }
 
-
 .filter-category {
-	margin: 2px 0;
-	background-color: whitesmoke;
+	padding: 2px 0;
+	background-color: lightgrey;
 	color: black;
 	font-weight: normal;
+}
+
+.category-item {
+	margin: 2px 0;
+}
+
+.category-header {
+	background-color: white;
 }

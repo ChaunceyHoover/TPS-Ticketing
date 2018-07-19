@@ -9,11 +9,13 @@ html
 				#ticket-wrapper
 					#filter-menu
 						.menu-header Ticket categories
-						.filter-category Category
+						.filter-category
+							.category-item.category-header 
+								span.octicon.octicon-triangle-right
+								| Category
 							.category-item Hello yes
 							.category-item This is item
 							
-
 					#ticket-display
 						- tickets = [];
 						each ticket in tickets
