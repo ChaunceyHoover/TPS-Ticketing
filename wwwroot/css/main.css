@@ -1,23 +1,20 @@
+/* Fix z-index bug with navbar being under #page-content */
+nav {
+	z-index: 1000;
+}
+
+/* Wraps #page-content and #sidenav together */
 #wrapper {
 	display: flex !important;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 62px;
 }
 
-#page-content {
-	width: 100%;
-	transition: width 0.5s ease;
-}
-
-#sidenav {
-	flex: 0 0px;
-	max-width: 0px;
-	min-width: 0px;
-	white-space: nowrap;
-
-	transition: max-width 0.5s ease;
-	transition: width 0.5s ease;
-	transition: min-width 0.5s ease;
-}
-
+/* Animation for content inside of wrapper */
 #wrapper.visible #sidenav {
 	max-width: 250px !important;
 	min-width: 250px !important;
@@ -25,4 +22,46 @@
 
 #wrapper.visible #page-content {
 	width: calc(100% - 250px);
+}
+
+/* Main page content */
+#page-content {
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	transition: width 0.5s ease;
+	background-image: url('/img/background.png');
+	background-repeat: repeat;
+	overflow-y: scroll;
+}
+
+/* Settings menu on right */
+#sidenav {
+	flex: 0 0px;
+	max-width: 0px;
+	min-width: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+
+	transition: max-width 0.5s ease;
+	transition: width 0.5s ease;
+	transition: min-width 0.5s ease;
+}
+
+/* Wraps #filter-menu and #ticket-display together */
+#ticket-wrapper {
+	display: flex !important;
+}
+#ticket-wrapper > div {
+	padding: 8px 16px;
+}
+
+/* The ticket filtering menu on the left side of main page */
+#filter-menu {
+	flex: 0 250px;
+}
+
+/* The container for displaying tickets */
+#ticket-display {
+	flex: 1;
 }
