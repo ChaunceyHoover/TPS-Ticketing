@@ -65,3 +65,21 @@ nav {
 #ticket-display {
 	flex: 1;
 }
+
+.menu-header {
+	font-size: 1em;
+	font-weight: bold;
+	background-color: gray;
+	color: white;
+	border: 1px solid dimgray;
+	border-radius: 0.5em 0.5em 0 0;
+	padding: 0.5em 1em;
+}
+
+
+.filter-category {
+	margin: 2px 0;
+	background-color: whitesmoke;
+	color: black;
+	font-weight: normal;
+}

@@ -8,17 +8,12 @@ html
 			#page-content
 				#ticket-wrapper
 					#filter-menu
-						.container
-							.filter-header
-								h4 Ticket categories
-							.filter-subheader
-								a.list-group-item.list-group-item-info(data-toggle="collapse", role="button", href="#collapse-menu") Categories
-								.collapse#collapse-menu
-						.list-group
-							p.list-group-item.list-group-item-info Categories
-							p.list-group-item.list-group-item-action Example1
-							p.list-group-item.list-group-item-action Example2
-							p.list-group-item.list-group-item-action Example3
+						.menu-header Ticket categories
+						.filter-category Category
+							.category-item Hello yes
+							.category-item This is item
+							
+
 					#ticket-display
 						- tickets = [];
 						each ticket in tickets
