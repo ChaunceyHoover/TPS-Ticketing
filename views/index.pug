@@ -11,10 +11,21 @@ html
 						.menu-header Ticket categories
 						.filter-category
 							.category-item.category-header 
-								span.octicon.octicon-triangle-right
+								span.octicon.octicon-triangle-down
 								| Category
-							.category-item Hello yes
-							.category-item This is item
+							#subheader-wrapper1
+								.category-item.category-subheader Porn
+									span.badge.badge-secondary.float-right.mr-1 999
+								.category-item.category-subheader Not Porn
+									span.badge.badge-secondary.float-right.mr-1 1
+							.category-item.category-header
+								span.octicon.octicon-triangle-down
+								| Category 2
+							#subheader-wrapper2
+								.category-item.category-subheader TPS
+									span.badge.badge-secondary.float-right.mr-1 1
+								.category-item.category-subheader Stroken
+									span.badge.badge-secondary.float-right.mr-1 999
 							
 					#ticket-display
 						- tickets = [];

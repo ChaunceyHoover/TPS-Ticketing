@@ -78,15 +78,27 @@ nav {
 
 .filter-category {
 	padding: 2px 0;
-	background-color: lightgrey;
+	background-color: rgb(235, 235, 235);
 	color: black;
 	font-weight: normal;
+	border: 1px solid rgb(205, 205, 205);
+	border-top: none;
 }
 
 .category-item {
-	margin: 2px 0;
+	margin: 4px 0;
+}
+.category-item > * {
+	padding: 5px;
 }
 
 .category-header {
 	background-color: white;
+}
+
+.category-subheader {
+	margin-left: 21px;
+}
+.category-subheader > span {
+	margin-top: 1px;
 }
