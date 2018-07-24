@@ -7,7 +7,7 @@ html
 		#wrapper
 			#page-content
 				#ticket-wrapper
-					#filter-menu
+					#filter-menu(style="min-width:194px")
 						.menu-header Ticket categories
 						.filter-category
 							.category-item.category-header 
@@ -27,15 +27,44 @@ html
 								.category-item.category-subheader Stroken
 									span.badge.badge-secondary.float-right.mr-1 999
 							
-					#ticket-display
-						- tickets = [];
-						each ticket in tickets
-							p haha yes, tickets
-						else
-							p There are no tickets
-							img(src="/img/feelsspecial.png", alt="FeelsSpecial")
-			#sidenav
-				h2 Sidenav content
+					#ticket-display.mx-1
+						.menu-header.row#ticket-display-header
+							.col-4 Subject
+							.col-1 Priority
+							.col-1 Status
+							.col-2.text-right Date
+							.col-2.text-right Due
+							.col-2.text-right Updated
+						- var asdf = [ {s: "Yeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaas", op: "Me", id: 12345, p: "Normal", st: "Open", da: "MM/DD/YY HH:mm:SS", du: "MM/DD/YY HH:mm:SS", u: "MM/DD/YY HH:mm:SS", c: "Not Porn"},{s: "No", id:12344, op: "You", p: "High", st: "In Progress", da: "MM/DD/YY HH:mm:SS", du: "MM/DD/YY HH:mm:SS", u: "MM/DD/YY HH:mm:SS", c: "Porn"} ]
+						each ticket in asdf
+							.ticket.row
+								.col-4.my-auto
+									.row.px-2
+										a.ticket-subject.truncate-text(href='/ticket?id=0', style="max-width:calc(100% - 33.7px)")= ticket.s
+										if Math.random() > 0.5
+											span.badge.badge-warning.ml-auto.my-auto cust
+										else
+											span.badge.badge-success.ml-auto.my-auto tech
+									.row.px-2
+										a.ticket-poster(href="#") 
+											img.my-auto(src="/img/icons8-account-24.png", alt="", width="12", height="12")
+											| #{ticket.op}
+										a.ticket-poster.ml-2(href="#")
+											img.my-auto(src="/img/icons8-folder.svg", alt="", width="12", height="12")
+											| #{ticket.c}
+										a.ticket-poster.ml-auto(href="#")= '#' + ticket.id
+
+								.col-1.my-auto= ticket.p
+								.col-1.my-auto= ticket.st
+								.col-2.my-auto.text-right= ticket.da
+								.col-2.my-auto.text-right= ticket.du
+								.col-2.my-auto.text-right= ticket.u
+
+
+			.bg-secondary#sidenav
+				ul.list-group.list-group-flush
+					li.list-group-item.list-group-item-action.list-group-item-dark Account
+					li.list-group-item.list-group-item-action.list-group-item-dark Logout
 		
 		//- Bootstrap, jQuery, etc.
 		include scripts.pug

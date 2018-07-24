@@ -11,7 +11,7 @@ nav {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding-top: 62px;
+	padding-top: 58px;
 }
 
 /* Animation for content inside of wrapper */
@@ -66,6 +66,12 @@ nav {
 	flex: 1;
 }
 
+#ticket-display-header {
+	background-color: rgb(235, 235, 235);
+	border-color: rgb(205, 205, 205);
+	color: grey;
+}
+
 .menu-header {
 	font-size: 1em;
 	font-weight: bold;
@@ -74,6 +80,9 @@ nav {
 	border: 1px solid dimgray;
 	border-radius: 0.5em 0.5em 0 0;
 	padding: 0.5em 1em;
+}
+.menu-header * {
+	padding: 0;
 }
 
 .filter-category {
@@ -101,4 +110,36 @@ nav {
 }
 .category-subheader > span {
 	margin-top: 1px;
+}
+
+.ticket {
+	background-color: white;
+	min-width: 750px;
+	min-height: 64px;
+	max-height: 64px;
+	border-left: 1px solid rgb(205, 205, 205);
+	border-right: 1px solid rgb(205, 205, 205);
+	border-bottom: 1px solid rgb(205, 205, 205);
+}
+.ticket:nth-child(2n+1) {
+	background-color: rgb(245,245,245);
+}
+.ticket .ticket-subject {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.ticket .ticket-poster {
+	font-size: 12px;
+	color: grey;
+}
+
+.ticket-poster img {
+	fill: grey;
+}
+
+.truncate-text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
