@@ -24,6 +24,8 @@
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "moment": "^2.22.2",
+    "momentjs": "^2.0.0",
     "mysql": "^2.15.0",
     "nodemon": "^1.18.2",
     "octicons": "^8.0.0",
