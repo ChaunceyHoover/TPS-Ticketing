@@ -1,0 +1,23 @@
+/*html {
+	background: url('/img/background-1.png') no-repeat fixed center center;
+	background-size: cover;
+	height: 100%;
+}
+
+body {
+	background-color: rgba(0, 0, 0, 0);
+}*/
+
+#login-wrapper {
+	min-width: 370px;
+	max-width: 370px;
+	min-height: 370px;
+	max-height: 370px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 50px 70px 70px 70px;
+}
+
+#login-wrapper p {
+	font-size: 12px;
+}
