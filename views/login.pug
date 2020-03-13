@@ -12,6 +12,11 @@ html
 				input.form-control#username(type="text", placeholder="Username or Email")
 			.form-group
 				input.form-control#password(type="password", placeholder="Password")
+			button.btn.btn-success.btn-block(type="button") Login
+			//a.mt-2(href="#", onclick="alert('Too bad u fukwit. Go see a manager')") Forgot your password?
+
+		#shape-container
 
 		//- Bootstrap, jQuery, etc.
 		include scripts.pug
+		script(src="/js/login.js")
